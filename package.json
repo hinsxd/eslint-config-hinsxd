@@ -1,8 +1,12 @@
 {
-  "name": "eslint-config-hinsxd",
-  "version": "0.0.1",
+  "name": "@hinsxd/eslint-config",
+  "private": false,
+  "version": "0.1.0",
   "main": "index.js",
-  "repository": "git@github.com:hinsxd/eslint-config-hinsxd.git",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/hinsxd/eslint-config-hinsxd.git"
+  },
   "author": "Alvin Li <hins.xd@hotmail.com>",
   "license": "MIT",
   "peerDependencies": {
@@ -24,5 +28,14 @@
     "eslint-plugin-unused-imports": "^2.0.0",
     "prettier": "^2.5.1",
     "typescript": "^4.5.0"
-  }
+  },
+  "bugs": {
+    "url": "https://github.com/hinsxd/eslint-config-hinsxd/issues"
+  },
+  "homepage": "https://github.com/hinsxd/eslint-config-hinsxd#readme",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "description": ""
 }
