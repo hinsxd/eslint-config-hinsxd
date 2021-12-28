@@ -17,7 +17,6 @@ module.exports = {
     "plugin:prettier/recommended",
   ],
   rules: {
-    "react/display-name": "off",
     "@typescript-eslint/explicit-function-return-type": "off",
     "@typescript-eslint/explicit-module-boundary-types": "off",
     "@typescript-eslint/interface-name-prefix": "off",
@@ -87,7 +86,9 @@ module.exports = {
     {
       files: "*.tsx",
       extends: ["next", "next/core-web-vitals"],
-      rules: {},
+      rules: {
+        "react/display-name": "off",
+      },
     },
   ],
 }
