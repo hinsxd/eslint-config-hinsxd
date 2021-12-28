@@ -1,19 +1,23 @@
-{
-  "root": true,
-  "ignorePatterns": ["*.js"],
-  "parser": "@typescript-eslint/parser",
+/**
+ * @type {import("eslint").Linter.Config}
+ */
+module.exports = {
+  root: true,
+  ignorePatterns: ["*.js"],
+  parser: "@typescript-eslint/parser",
 
-  "plugins": [
+  plugins: [
     "@typescript-eslint/eslint-plugin",
     "unused-imports",
     "prettier",
-    "import"
+    "import",
   ],
-  "extends": [
+  extends: [
     "plugin:@typescript-eslint/recommended",
-    "plugin:prettier/recommended"
+    "plugin:prettier/recommended",
   ],
-  "rules": {
+  rules: {
+    "react/display-name": "off",
     "@typescript-eslint/explicit-function-return-type": "off",
     "@typescript-eslint/explicit-module-boundary-types": "off",
     "@typescript-eslint/interface-name-prefix": "off",
@@ -25,7 +29,7 @@
     "import/order": [
       "error",
       {
-        "groups": [
+        groups: [
           "builtin",
           "external",
           "internal",
@@ -34,56 +38,56 @@
           "sibling",
           "index",
           "object",
-          "type"
+          "type",
         ],
         "newlines-between": "always-and-inside-groups",
-        "pathGroups": [
+        pathGroups: [
           {
-            "group": "internal",
-            "pattern": "@/**"
-          }
-        ]
-      }
+            group: "internal",
+            pattern: "@/**",
+          },
+        ],
+      },
     ],
     "no-restricted-imports": [
       "error",
       {
-        "patterns": [
+        patterns: [
           {
-            "group": ["src/*"],
-            "message": "Please use \"@/...\" for absolute import"
-          }
-        ]
-      }
+            group: ["src/*"],
+            message: 'Please use "@/..." for absolute import',
+          },
+        ],
+      },
     ],
     "prettier/prettier": "warn",
     "unused-imports/no-unused-imports": "error",
-    "unused-imports/no-unused-vars": "warn"
+    "unused-imports/no-unused-vars": "warn",
   },
-  "overrides": [
+  overrides: [
     {
-      "files": "*.ts",
-      "parserOptions": {
-        "project": "tsconfig.json",
-        "sourceType": "module"
+      files: "*.ts",
+      parserOptions: {
+        project: "tsconfig.json",
+        sourceType: "module",
       },
-      "settings": {
+      settings: {
         "import/resolver": {
-          "typescript": {}
-        }
+          typescript: {},
+        },
       },
 
-      "env": {
-        "node": true,
-        "jest": true
+      env: {
+        node: true,
+        jest: true,
       },
 
-      "rules": {}
+      rules: {},
     },
     {
-      "files": "*.tsx",
-      "extends": ["next", "next/core-web-vitals"],
-      "rules": {}
-    }
-  ]
+      files: "*.tsx",
+      extends: ["next", "next/core-web-vitals"],
+      rules: {},
+    },
+  ],
 }
