@@ -11,6 +11,7 @@
   "license": "MIT",
   "peerDependencies": {
     "@typescript-eslint/eslint-plugin": "^5.0.0",
+    "@typescript-eslint/parser": "^5.0.0",
     "eslint-plugin-import": "^2.0.0",
     "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-unused-imports": "^2.0.0",
@@ -26,14 +27,15 @@
     "eslint-plugin-import": "^2.25.3",
     "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-unused-imports": "^2.0.0",
-    "prettier": "^2.5.1",
-    "typescript": "^4.5.0"
+    "prettier": "^2.5.1"
+  },
+  "devDependencies": {
+    "typescript:": "^4.5.0"
   },
   "bugs": {
     "url": "https://github.com/hinsxd/eslint-config-hinsxd/issues"
   },
   "homepage": "https://github.com/hinsxd/eslint-config-hinsxd#readme",
-  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
